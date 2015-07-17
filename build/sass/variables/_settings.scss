@@ -1,0 +1,208 @@
+/* ----------------------------------------------------------------- */
+/* Font Settings
+/* ----------------------------------------------------------------- */
+
+/* Smoothing
+/*--------------------------------- */
+$enable-font-smoothing: true !default;
+
+/* Font Sizes
+/*--------------------------------- */
+$base-font-size:     16px !default;
+$base-line-height:   24px !default;
+
+/* Color
+/*--------------------------------- */
+$base-font-color:    #333333 !default;
+$base-link-color:    #62b3e7 !default;
+$base-heading-color: #181818 !default;
+$base-sub-heading-color: #808080 !default;
+
+/* Family
+/*--------------------------------- */
+$base-font-family:         "Droid Sans", Helvetica, Arial, sans-serif !default;
+$heading-font-family--primary:   "Homestead", Helvetica, Arial, sans-serif !default;
+$heading-font-family--secondary: "Lato", Helvetica, Arial, sans-serif !default;
+$heading-font-family--menu: "Homestead", Helvetica, Arial, sans-serif !default;
+
+$base-print-font-family: Georgia, "Times New Roman", Times, serif !default;
+
+/* Spacing & Line Height
+/*--------------------------------- */
+$base-spacing-unit: $base-line-height !default;
+$half-spacing-unit: $base-spacing-unit / 2 !default;
+$line-height-ratio: $base-line-height / $base-font-size;
+
+
+/* ----------------------------------------------------------------- */
+/* Responsive
+/* ----------------------------------------------------------------- */
+
+$breakpoint--Extra-Small: 30em !default;
+$breakpoint--Small:      48em !default;
+$breakpoint--Medium:     60em !default;
+$breakpoint--Large:      70em !default;
+$breakpoint--Extra-Large: 80em !default;
+
+$breakpoint-map: (
+  "invisible":   0em,
+  "extra-small": $breakpoint--Extra-Small,
+  "small":       $breakpoint--Small,
+  "medium":      $breakpoint--Medium,
+  "large":       $breakpoint--Large,
+  "extra-large": $breakpoint--Extra-Large
+);
+
+
+/* ----------------------------------------------------------------- */
+/* Columns
+/* ----------------------------------------------------------------- */
+
+/* Gutter Size
+/*--------------------------------- */
+$gutters: 2% !default;
+
+/* Column Name
+/* Default Format: column-8
+/*--------------------------------- */
+$column-prefix: 'column-' !default;
+
+/* Column Number
+/* Default Value: 16 'column-*''
+/*--------------------------------- */
+$column-number: 16 !default;
+
+/* ----------------------------------------------------------------- */
+/* Theme Defaults
+/* ----------------------------------------------------------------- */
+
+/* Utility
+/*--------------------------------- */
+$use-normalize:       true !default;
+$use-clearfix:        true !default;
+$use-vertical-rhythm: true !default;
+
+
+/* Base
+/*--------------------------------- */
+$use-main:           true !default;
+$use-selection:      true !default;
+$use-container:      true !default;
+$use-typography:     true !default;
+$use-headings:       true !default;
+$use-lists:          true !default;
+  $use-list-styles:  true !default;
+$use-tables:         true !default;
+  $use-table-styles: true !default;
+$use-forms:          true !default;
+  $use-form-styles:  true !default;
+$use-grid:           true !default;
+  $use-push:	       true !default;
+  $use-pull:	       true !default;
+
+/* Padding
+/*--------------------------------- */
+$use-padding:             true !default;
+$use-padding--vertical:   true !default;
+$use-padding--horizontal: true !default;
+$use-padding--top:        true !default;
+$use-padding--bottom:     true !default;
+$use-padding--left:       true !default;
+$use-padding--right:      true !default;
+
+$padding-options: (
+  xs:  10px,
+  sm:  20px,
+  md:  40px,
+  lg:  80px,
+  xl:  120px,
+);
+
+/* Margin
+/*--------------------------------- */
+$use-margin:             true !default;
+$use-margin--vertical:   true !default;
+$use-margin--horizontal: true !default;
+$use-margin--top:        true !default;
+$use-margin--bottom:     true !default;
+$use-margin--left:       true !default;
+$use-margin--right:      true !default;
+
+$margin-options: (
+  xs:  10px,
+  sm:  20px,
+  md:  40px,
+  lg:  80px,
+  xl:  120px,
+);
+
+$margin-Options--Mobile: (
+  xs:  10px,
+  sm:  20px,
+  md:  40px,
+  lg:  80px,
+  xl:  120px,
+);
+
+$margin-Options--Tablet: (
+  xs:  10px,
+  sm:  20px,
+  md:  40px,
+  lg:  80px,
+  xl:  120px,
+);
+
+$margin-Options--Laptop: (
+  xs:  10px,
+  sm:  20px,
+  md:  40px,
+  lg:  80px,
+  xl:  120px,
+);
+
+$margin-Options--Desktop: (
+  xs:  10px,
+  sm:  20px,
+  md:  40px,
+  lg:  80px,
+  xl:  120px,
+);
+
+
+/* Colors
+/*--------------------------------- */
+$use-bg-colors:               true !default;
+$use-theme-colors:            true !default;
+$use-type-colors:             true !default;
+
+$use-background:              true !default;
+$use-background-opacity:      true !default;
+
+/* Components
+/*--------------------------------- */
+$use-buttons:                 true !default;
+  $use-button-bg-colors:      true !default;
+  $use-button-styles:         true !default;
+$use-dropdowns:               true !default;
+$use-navigation:              true !default;
+  $use-responsive-navigation: true !default;
+
+
+/* Helpers
+/* ----------------------------------------------------------------- */
+$use-helper:      true !default;
+$use-conditional: true !default;
+$use-print:       true !default;
+
+$z-layers: (
+  top:    1000,
+  middle: 10,
+  bottom: 0,
+);
+
+
+/* Legacy Support
+/* ----------------------------------------------------------------- */
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: true;
+$legacy-support-for-ie8: true;

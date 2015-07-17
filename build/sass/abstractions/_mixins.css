@@ -1,0 +1,8 @@
+/* Padding All
+/* @include padding($padding: 10px);
+/* ----------------------------------------------------------------- */
+/* Transistion
+/* @include TransistionEffect($delay: 0s, $duration: 0.25s, $property: all);
+/* ----------------------------------------------------------------- */
+
+/*# sourceMappingURL=_mixins.css.map */

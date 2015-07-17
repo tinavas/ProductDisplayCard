@@ -1,0 +1,116 @@
+// Pseudo Selector Mixins
+// Ehance the user experience using a variety of Pseudo Selector mixins.
+// ===================================================================================================== +
+
+// Pseudo Background Color
+// Shorthand Reference: @include pseudoBackgroundColor($pseudo: before, $color: #000, $opacity: 1, $z: 1);
+// ===================================================================================================== +
+@mixin pseudoBackgroundColor($pseudo: before, $color: #000, $opacity: 1, $z: 1) {
+  position: relative;
+  &::#{$pseudo} {
+    bottom: 0;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    @include rgba-background(rgba($color,$opacity));
+    z-index:$z;
+  }
+}
+
+// Pseudo Background Image
+// Shorthand Reference: @include pseudoBackgroundImage($pseudo: before, $image: default, $ext: jpg, $size: cover, $z: 1)
+// ===================================================================================================== +
+@mixin pseudoBackgroundImage($pseudo: before,$height: inherit, $top: 0, $bottom: 0, $left:0, $right: 0, $image: default, $ext: jpg, $size: cover, $pos: center, $opacity: 1, $z: 1) {
+  position: relative;
+  &::#{$pseudo} {
+    background-image: url('../assets/bg/bg-#{$image}.#{$ext}');
+    @include background-size($size);
+    background-position:$pos;
+    bottom: $bottom;
+    content: "";
+    height: $height;
+    left: $left;
+    right: $right;
+    top: $top;
+    opacity: $opacity;
+    position: absolute;
+    z-index:$z;
+  }
+}
+
+// Pseudo Background Gradient
+// Shorthand Reference: @include pseudoBackgroundGradient($color1: rgba(0,0,0, 0.3), $color2:  rgba(0,0,0, 0.3), $color3:  NULL, $opacity: 0.65, $z: 1)
+// ===================================================================================================== +
+@mixin pseudoBackgroundGradient($colorFirst: rgba(0,0,0, 0), $colorSecond:  rgba(0,0,0, 0.4), $colorThird:  NULL, $opacity: 0.65, $z: 1) {
+  position: relative;
+  &::before {
+    bottom: 0;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    @include rgba-background(rgba($colorFirst, $opacity));
+    @if $colorThird == NULL {
+      @include vertical-gradient($start: $colorFirst, $stop: $colorSecond);
+    }
+    @include backgroundGradient($colorFirst, $colorSecond, $colorThird);
+    z-index:$z;
+  }
+}
+
+// Pseudo Transistion
+// Target existing Pseudo Elements and add new transistion properties.
+// Shorthand Reference: @include pseudoTransistion($psuedo: before; $delay: 0.2s, $duration: 0.2s, $property: all);
+// ===================================================================================================== +
+@mixin pseudoTransistion($pseudo: before, $delay: 0.2s, $duration: 0.2s, $property: all) {
+  &::#{$pseudo} {
+    @include transition-delay($delay);
+    @include transition-duration($duration);
+    @include transition-property($property);
+  }
+}
+
+// Pseudo SimpleTransform
+// The pseudoSimpleTransform mixin changes the shape and size of a Pseudo Element based off of the parent's state.
+// It's a lightweight mixin meant to solve only the most basic design enhancements. Use the pseudoTransform for more advanced options.
+// ===================================================================================================== +
+@mixin pseudoSimpleTransform($pseudo: before,$height: inherit, $width: inherit, $property: all) {
+  &::#{$pseudo} {
+    height: $height;
+    width: $width;
+  }
+}
+
+// Pseudo Transform
+// The pseudoSimpleTransform mixin changes the shape and size of a Pseudo Element based off of the parent's state.
+// It uses Compass Trasnform mixin to achieve more complex design enhancements.
+// ===================================================================================================== +
+@mixin pseudoTransform($pseudo: before,$height: inherit, $width: inherit, $property: all) {
+  &::#{$pseudo} {
+    height: $height;
+    width: $width;
+  }
+}
+
+// Pseudo Title Underline
+// The pseudoUnderline mixin creates a underline underneath Headings(H1,H2,H3, etc...) which provides more control and capabilities.
+// ===================================================================================================== +
+@mixin pseudoUnderline($bottom: 0,$color: #3d8d38, $height: 3, $left: 0, $opacity: 1, $width: 35px, $z: 1) {
+  position: relative;
+  &::after {
+    @include rgba-background(rgba($color,$opacity));
+    bottom: $bottom;
+    content: "";
+    color:$color;
+    height: $height + px;
+    left: $left;
+    right: 0;
+    position: absolute;
+    width: $width;
+    z-index:$z;
+  }
+}
+

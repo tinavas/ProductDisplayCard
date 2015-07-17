@@ -1,0 +1,131 @@
+/* Text Align
+/* -----------------------------------------------------------------*/
+$use-text-Align--mobile: true !default;
+$use-text-Align: true !default;
+$use-text-Family: true !default;
+$use-text-Shadow: true !default;
+$use-text-Size: true !default;
+$use-text-Weight: true !default;
+$use-text-Transform: true !default;
+
+
+/* Mobile
+/*--------------------------------- */
+@if $use-text-Align--mobile == true {
+  @media (max-width: $breakpoint--Medium) {
+    .mobile-text--left {
+      text-align: left;
+    }
+
+    .mobile-text--right {
+      text-align: right;
+    }
+
+    .mobile-text--center {
+      text-align: center;
+    }
+
+    .mobile-text--justify {
+      text-align: justify;
+    }
+  }
+}
+
+/* Desktop
+/*--------------------------------- */
+@if $use-text-Align == true {
+  .text--left {
+    text-align: left;
+  }
+
+  .text--right {
+    text-align: right;
+  }
+
+  .text--center {
+    text-align: center;
+  }
+
+  .text--justify {
+    text-align: justify;
+  }
+}
+
+/* Font Family
+/* -----------------------------------------------------------------*/
+@if $use-text-Family == true {
+  .text--primary {
+    font-family: $heading-font-family--primary;
+  }
+  .text--secondary {
+    font-family: $heading-font-family--primary;
+  }
+}
+
+/* Text Weight
+/* -----------------------------------------------------------------*/
+@if $use-text-Size == true {
+  .text--small {
+    font-size: 0.8rem;
+  }
+
+  .text--large {
+    font-size: 1.2rem;
+  }
+
+}
+
+/* Text Weight
+/* -----------------------------------------------------------------*/
+@if $use-text-Weight == true {
+  .text--100 {
+    font-weight: 300;
+  }
+
+  .text--300 {
+    font-weight: 300;
+  }
+
+  .text--normal {
+    font-weight: normal;
+  }
+
+  .text--600 {
+    font-weight: 600;
+  }
+
+  .text--700 {
+    font-weight: 700;
+  }
+
+  .text--900 {
+    font-weight: 900;
+  }
+}
+
+/* Text Shadow
+/* -----------------------------------------------------------------*/
+@if $use-text-Shadow == true {
+  .text--shadow-light {
+    @include text-shadow(2px 2px 2px rgba(0,0,0, 0.325));
+  }
+  .text--shadow-dark {
+    @include text-shadow(2px 2px 2px rgba(0,0,0, 0.45));
+  }
+}
+
+
+/* Text Transform
+/* -----------------------------------------------------------------*/
+@if $use-text-Transform == true {
+  .text--uppercase {
+    text-transform: uppercase;
+  }
+}
+
+
+.text--gradient {
+  background: -webkit-linear-gradient(#FFF, #96c2e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,184 @@
+$border--Color: #3E3E3E !default;
+$border--Color--Primary: $color--Primary !default;
+$border--Color--Secondary: $color--Secondary !default;
+$border--Size--Normal: 2px !default;
+$border--Radius--Shaved: 5px;
+$border--Radius--Curved: 5px;
+$border--Radius--Rounded: 5px;
+
+/* ----------------------------------------------------------------- */
+/* Border
+/* ----------------------------------------------------------------- */
+@if $use-Border == true {
+
+	.border {
+		border: $border--Size--Normal solid $border--Color;
+	}
+	.border--top {
+		border-top: $border--Size--Normal solid $border--Color;
+	}
+	.border--bottom {
+		border-bottom: $border--Size--Normal solid $border--Color;
+	}
+	.border--left {
+		border-left: $border--Size--Normal solid $border--Color;
+	}
+	.border--right {
+		border-right: $border--Size--Normal solid $border--Color;
+	}
+
+	@if $use-Border--Primary == true {
+		.border--primary {
+			border: $border--Size--Normal solid $border--Color--Primary;
+		}
+		.border--top--primary {
+			border-top: $border--Size--Normal solid $border--Color--Primary;
+		}
+		.border--bottom--primary {
+			border-bottom: $border--Size--Normal solid $border--Color--Primary;
+		}
+		.border--left--primary {
+			border-left: $border--Size--Normal solid $border--Color--Primary;
+		}
+		.border--right--primary {
+			border-right: $border--Size--Normal solid $border--Color--Primary;
+		}
+	}
+
+	@if $use-Border--Secondary == true {
+		.border--secondary {
+			border: 1px solid $border--Color--Secondary;
+		}
+		.border--top--secondary {
+			border-top: 1px solid $border--Color--Secondary;
+		}
+		.border--bottom--secondary {
+			border-bottom: 1px solid $border--Color--Secondary;
+		}
+		.border--left--secondary {
+			border-left: 1px solid $border--Color--Secondary;
+		}
+		.border--right--secondary {
+			border-right: 1px solid $border--Color--Secondary;
+		}
+	}
+
+}
+
+/* ----------------------------------------------------------------- */
+/* Border Radius
+/* ----------------------------------------------------------------- */
+@if $use-Border--Radius == true {
+	
+/* Border Radius Circle
+/*--------------------------------- */
+.border--circle {
+	@include border-radius(50%);
+}
+
+/* Border Radius Shaved
+/*--------------------------------- */
+	@if $use-Border--Radius--Shaved == true {
+		
+		.border--radius--shaved {
+			border-radius: $border--Radius--Shaved;
+		}
+
+		@if $use-Border--Radius--Shaved--Sides == true {
+			.border--radius-l--shaved {
+				border-radius: $border--Radius--Shaved 0 0 $border--Radius--Shaved;
+			}
+
+			.border--radius-lt--shaved {
+				border-radius: $border--Radius--Shaved 0 0 0;
+			}
+
+			.border--radius-lb--shaved {
+				border-radius: 0 0 0 $border--Radius--Shaved;
+			}
+			
+			.border--radius-r--shaved {
+				border-radius: 0 $border--Radius--Shaved $border--Radius--Shaved 0;
+			}
+
+			.border--radius-rt--shaved {
+				border-radius: 0 $border--Radius--Shaved 0 0;
+			}
+
+			.border--radius-rb--shaved {
+				border-radius: 0 0 $border--Radius--Shaved 0;
+			}
+		} /* End $use-Border--Radius--Shaved--Sides */
+	} /* End $use-Border--Radius--Shaved */
+
+/* Border Radius Curved
+/*--------------------------------- */
+	@if $use-Border--Radius--Curved == true {
+		
+		.border--radius--curved {
+			border-radius: $border--Radius--Curved;
+		}
+		
+		@if $use-Border--Radius--Curved--Sides == true {
+			.border--radius-l--curved {
+				border-radius: $border--Radius--Curved 0 0 $border--Radius--Curved;
+			}
+
+			.border--radius-lt--curved {
+				border-radius: $border--Radius--Curved 0 0 0;
+			}
+
+			.border--radius-lb--curved {
+				border-radius: 0 0 0 $border--Radius--Curved;
+			}
+			
+			.border--radius-r--curved {
+				border-radius: 0 $border--Radius--Curved $border--Radius--Curved 0;
+			}
+
+			.border--radius-rt--curved {
+				border-radius: 0 $border--Radius--Curved 0 0;
+			}
+
+			.border--radius-rb--curved {
+				border-radius: 0 0 $border--Radius--Curved 0;
+			}
+		} /* End $use-Border--Radius--Curved--Sides */
+	} /* End $use-Border--Radius--Curved */
+
+/* Border Radius Rounded
+/*--------------------------------- */
+	@if $use-Border--Radius--Rounded == true {
+		
+		.border--radius--rounded {
+			border-radius: $border--Radius--Rounded;
+		}
+		
+		@if $use-Border--Radius--Rounded--Sides == true {
+			.border--radius-l--rounded {
+				border-radius: $border--Radius--Rounded 0 0 $border--Radius--Rounded;
+			}
+
+			.border--radius-lt--rounded {
+				border-radius: $border--Radius--Rounded 0 0 0;
+			}
+
+			.border--radius-lb--rounded {
+				border-radius: 0 0 0 $border--Radius--Rounded;
+			}
+			
+			.border--radius-r--rounded {
+				border-radius: 0 $border--Radius--Rounded $border--Radius--Rounded 0;
+			}
+
+			.border--radius-rt--rounded {
+				border-radius: 0 $border--Radius--Rounded 0 0;
+			}
+
+			.border--radius-rb--rounded {
+				border-radius: 0 0 $border--Radius--Rounded 0;
+			}
+		} /* End $use-Border--Radius--Rounded--Sides */
+	} /* End $use-Border--Radius--Rounded */
+
+}

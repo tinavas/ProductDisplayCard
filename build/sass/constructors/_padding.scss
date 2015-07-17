@@ -1,0 +1,86 @@
+/* Padding
+/* ----------------------------------------------------------------- */
+$use-Padding: true !default;
+
+$use-Padding--Vertical: true !default;
+$use-Padding--Top: true !default;
+$use-Padding--Bottom: true !default;
+
+$use-Padding--Horizontal: true !default;
+$use-Padding--Left: true !default;
+$use-Padding--Right: true !default;
+
+/* All
+/*--------------------------------- */
+@if $use-Padding == true {
+  @each $padding-option, $padding in $padding-options {
+    .pad-#{$padding-option},
+    %pad-#{$padding-option} { padding: $padding; }
+  }
+}
+
+/* Vertical
+/*--------------------------------- */
+@if $use-Padding--Vertical == true {
+  @each $padding-option, $padding in $padding-options {
+    .pad-vert-#{$padding-option},
+    %pad-vert-#{$padding-option} { padding-top: $padding; padding-bottom: $padding; }
+  }
+}
+
+/* Top
+/*--------------------------------- */
+@if $use-Padding--Top == true {
+  @each $padding-option, $padding in $padding-options {
+    .pad-top-#{$padding-option},
+    %pad-top-#{$padding-option} { padding-top: $padding; }
+  }
+}
+
+/* Bottom
+/*--------------------------------- */
+@if $use-Padding--Bottom == true {
+  @each $padding-option, $padding in $padding-options {
+    .pad-bottom-#{$padding-option},
+    %pad-bottom-#{$padding-option} { padding-bottom: $padding; }
+  }
+}
+
+
+/* Horizontal
+/*--------------------------------- */
+@if $use-Padding--Horizontal == true {
+  @each $padding-option, $padding in $padding-options {
+    .pad-horz-#{$padding-option},
+    %pad-horz-#{$padding-option} { padding-left: $padding; padding-right: $padding; }
+  }
+}
+
+/* Left
+/*--------------------------------- */
+@if $use-Padding--Left == true {
+  @each $padding-option, $padding in $padding-options {
+    .pad-left-#{$padding-option},
+    %pad-left-#{$padding-option} { padding-left: $padding; }
+  }
+}
+
+/* Right
+/*--------------------------------- */
+@if $use-Padding--Right == true {
+  @each $padding-option, $padding in $padding-options {
+    .pad-right-#{$padding-option},
+    %pad-right-#{$padding-option} { padding-right: $padding; }
+  }
+}
+
+/* Mobile Padding
+/* ----------------------------------------------------------------- */
+
+/* Resets
+/*--------------------------------- */
+.pad-mob-reset {
+  @media (max-width: $breakpoint--Small) {
+    padding: 0;
+  }
+}

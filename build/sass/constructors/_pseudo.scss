@@ -1,0 +1,176 @@
+
+/* Pseudo
+/* ----------------------------------------------------------------- */
+
+/* Initalization
+/*--------------------------------- */
+
+.pseudo--init {
+	&::before,
+	&::after {
+		content: " ";
+		display: inline-block;
+		position: absolute;
+	}
+}
+
+/* Pseudo Fill
+/*--------------------------------- */
+.pseudo--fill {
+	&::before,
+	&::after {
+		left: 0;
+		position: absolute;
+		right: 0;
+		width: 100%;
+	}
+}
+
+.pseudo--bottom {
+	bottom: 0;
+}
+
+.pseudo--top {
+	top: 0;
+}
+
+
+/* ----------------------------------------------------------------- */
+/* Pseudo Text Effects
+/* ----------------------------------------------------------------- */
+
+.pseudo--underline-single,
+.psuedo-underline-double {
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	bottom: -15px;
+	content: "";
+	display: inline-block;
+	height: 35px;
+	position: absolute;
+	left: 0;
+	position: absolute;
+	right: 0;
+	width: 100%;
+}
+.pseudo--underline-single {
+	background-image: url('/assets/images/pseudo/pseudo--underline-single.png');
+}
+.pseudo--underline-double {
+	background-image: url('/assets/images/pseudo/pseudo--underline-double.png');
+}
+
+/* ----------------------------------------------------------------- */
+/* Color Overlay
+/* ----------------------------------------------------------------- */
+
+/* Dark :: 25%
+/*--------------------------------- */
+.pseudoBefore--overlay-dark25::before {
+	@include rgba-background(rgba(#000, 0.25));
+}
+
+.pseudoAfter--overlay-dark25::after {
+	@include rgba-background(rgba(#000, 0.25));
+}
+
+/* Dark :: 30%
+/*--------------------------------- */
+.pseudoBefore--overlay-dark30::before {
+	@include rgba-background(rgba(#000, 0.3));
+}
+
+.pseudoAfter--overlay-dark30::after {
+	@include rgba-background(rgba(#000, 0.3));
+}
+
+/* ----------------------------------------------------------------- */
+/* Gradient Overlay
+/* ----------------------------------------------------------------- */
+$gradient--First-Begin: #7a67a5;
+$gradient--First-End: #2395d6;
+$gradient--Firsrt-Degrees: 45deg;
+
+.pseudoBefore--gradient-first::before {
+	@include linear-gradient($gradient--Firsrt-Degrees, rgba($gradient--First-Begin, 0.85) 0%, rgba($gradient--First-End, 0.85) 100%);
+}
+
+.pseudoAfter--gradient-first::after {
+	@include linear-gradient($gradient--Firsrt-Degrees, rgba($gradient--First-Begin, 0.85) 0%, rgba($gradient--First-End, 0.85) 100%);
+}
+
+$gradient--Second-Begin: #ffa604;
+$gradient--Second-End: #d97e1d;
+$gradient--Second-Degrees: 45deg;
+
+.pseudoBefore--gradient-second::before {
+	@include linear-gradient($gradient--Second-Degrees, rgba($gradient--Second-Begin, 0.85) 0%, rgba($gradient--Second-End, 0.85) 100%);
+}
+
+.pseudoAfter--gradient-second::after {
+	@include linear-gradient($gradient--Second-Degrees, rgba($gradient--Second-Begin, 0.85) 0%, rgba($gradient--Second-End, 0.85) 100%);
+}
+
+/* ----------------------------------------------------------------- */
+/* Edges
+/* ----------------------------------------------------------------- */
+
+.pseudo--mask-bottom-curved::before,
+.pseudo--mask-bottom-curved::after {
+	padding: 100px;
+	-webkit-mask-image: url('/assets/images/pseudo/pseudo--bottom-indented.png');
+	-webkit-mask-position: bottom center;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: 100% auto;
+	-webkit-mask-border: url(path/to/mask-image.png) 25 40 25 40 / 30 40 30 40 / 30 space;
+}
+
+.pseudoBefore--top-curved,
+.pseudoBefore--top-indented,
+.pseudoBefore--bottom-curved,
+.pseudoBefore--bottom-indented {
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	left: 0;
+	position: absolute;
+	right: 0;
+	width: 100%;
+}
+
+/* Position
+/*--------------------------------- */
+.pseudoBefore--top-curved,
+.pseudoBefore--top-indented {
+	top: 0;
+}
+
+.pseudoBefore--bottom-curved,
+.pseudoBefore--bottom-indented {
+	bottom: 0;
+}
+
+/* Top
+/*--------------------------------- */
+
+.pseudoBefore--top-curved {
+	background-image: url('/assets/pseudo/pseduo--top-curved.png');
+	height: 90px;
+}
+
+.pseudoBefore--top-indent {
+	background-image: url('/assets/pseudo/pseduo--top-indent.png');
+	height: 90px;
+}
+
+/* Bottom
+/*--------------------------------- */
+.pseudoBefore--bottom-curved {
+	background-image: url('/assets/pseudo/pseduo--bottom-curved.png');
+	height: 90px;
+}
+
+.pseudoBefore--bottom-indent {
+	background-image: url('/assets/pseudo/pseduo--bottom-indent.png');
+	height: 90px;
+}

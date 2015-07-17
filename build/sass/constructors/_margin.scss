@@ -1,0 +1,216 @@
+/* Margin
+/* ----------------------------------------------------------------- */
+$use-Margin: true !default;
+
+$use-Margin--Vertical: true !default;
+$use-Margin--Top: true !default;
+$use-Margin--Bottom: true !default;
+
+$use-Margin--Horizontal: true !default;
+$use-Margin--Left: true !default;
+$use-Margin--Right: true !default;
+
+
+/* All
+/*--------------------------------- */
+@if $use-Margin == true {
+
+  @each $margin-option, $margin in $margin-options {
+    .margin-#{$margin-option},
+    %margin-#{$margin-option} { margin: $margin; }
+  }
+
+  @each $margin-option, $margin in $margin-options {
+    .margin-vert-#{$margin-option},
+    %margin-vert-#{$margin-option} { margin-top: $margin; margin-bottom: $margin; }
+  }
+/* Vertical
+/*--------------------------------- */
+@if $use-Margin--Vertical == true {
+  @each $margin-option, $margin in $margin-options {
+    .margin-vert-#{$margin-option},
+    %margin-vert-#{$margin-option} { margin-top: $margin; margin-bottom: $margin; }
+  }
+}
+
+/* Top
+/*--------------------------------- */
+@if $use-Margin--Top == true {
+  @each $margin-option, $margin in $margin-options {
+    .margin-top-#{$margin-option},
+    %margin-top-#{$margin-option} { margin-top: $margin; }
+  }
+}
+
+/* Bottom
+/*--------------------------------- */
+@if $use-Margin--Bottom == true {
+  @each $margin-option, $margin in $margin-options {
+    .margin-bottom-#{$margin-option},
+    %margin-bottom-#{$margin-option} { margin-bottom: $margin; }
+  }
+}
+
+/* Horizontal
+/*--------------------------------- */
+@if $use-Margin--Horizontal == true {
+  @each $margin-option, $margin in $margin-options {
+    .margin-horz-#{$margin-option},
+    %margin-horz-#{$margin-option} { margin-left: $margin; margin-right: $margin; }
+  }
+}
+
+/* Left
+/*--------------------------------- */
+@if $use-Margin--Left == true {
+  @each $margin-option, $margin in $margin-options {
+    .margin-left-#{$margin-option},
+    %margin-left-#{$margin-option} { margin-left: $margin; }
+  }
+}
+
+/* Right
+/*--------------------------------- */
+@if $use-Margin--Right == true {
+  @each $margin-option, $margin in $margin-options {
+    .margin-right-#{$margin-option},
+    %margin-right-#{$margin-option} { margin-right: $margin; }
+  }
+}
+
+/* Breakpoint Small & Mobile
+/*--------------------------------- */
+  @media (min-width: $breakpoint--Small) {
+     @each $margin-option, $margin in $margin-Options--Mobile {
+      .margin--mobile--#{$margin-option},
+      %margin--mobile--#{$margin-option} { margin: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Mobile {
+      .margin--mobile-vert--#{$margin-option},
+      %margin--mobile-vert--#{$margin-option} { margin-top: $margin; margin-bottom: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Mobile {
+      .margin--mobile-horz--#{$margin-option},
+      %margin--mobile-horz--#{$margin-option} { margin-left: $margin; margin-right: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Mobile {
+      .margin--mobile-top--#{$margin-option},
+      %margin--mobile-top--#{$margin-option} { margin-top: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Mobile {
+      .margin--mobile-bottom--#{$margin-option},
+      %margin--mobile-bottom--#{$margin-option} { margin-bottom: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Mobile {
+      .margin--mobile-left--#{$margin-option},
+      %margin--mobile-left--#{$margin-option} { margin-left: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Mobile {
+      .margin--mobile-right--#{$margin-option},
+      %margin--mobile-right--#{$margin-option} { margin-right: $margin; }
+    }
+  }
+
+/* Breakpoint Medium & Tablet
+/*--------------------------------- */
+  @media (min-width: $breakpoint--Medium) {
+    @each $margin-option, $margin in $margin-Options--Tablet {
+      .margin--tablet--#{$margin-option},
+      %margin--tablet--#{$margin-option} { margin: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Tablet {
+      .margin--tablet-vert--#{$margin-option},
+      %margin--tablet-vert--#{$margin-option} { margin-top: $margin; margin-bottom: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Tablet {
+      .margin--tablet-horz--#{$margin-option},
+      %margin--tablet-horz--#{$margin-option} { margin-left: $margin; margin-right: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Tablet {
+      .margin--tablet-top--#{$margin-option},
+      %margin--tablet-top--#{$margin-option} { margin-top: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Tablet {
+      .margin--tablet-bottom--#{$margin-option},
+      %margin--tablet-bottom--#{$margin-option} { margin-bottom: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Tablet {
+      .margin--tablet-left--#{$margin-option},
+      %margin--tablet-left--#{$margin-option} { margin-left: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Tablet {
+      .margin--tablet-right--#{$margin-option},
+      %margin--tablet-right--#{$margin-option} { margin-right: $margin; }
+    } 
+  }
+/* Breakpoint Large & Laptop
+/*--------------------------------- */
+  @media (min-width: $breakpoint--Large) {
+    @each $margin-option, $margin in $margin-Options--Laptop {
+      .margin--laptop--#{$margin-option},
+      %margin--laptop--#{$margin-option} { margin: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Laptop {
+      .margin--laptop-vert--#{$margin-option},
+      %margin--laptop-vert--#{$margin-option} { margin-top: $margin; margin-bottom: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Laptop {
+      .margin--laptop-horz--#{$margin-option},
+      %margin--laptop-horz--#{$margin-option} { margin-left: $margin; margin-right: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Laptop {
+      .margin--laptop-top--#{$margin-option},
+      %margin--laptop-top--#{$margin-option} { margin-top: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Laptop {
+      .margin--laptop-bottom--#{$margin-option},
+      %margin--laptop-bottom--#{$margin-option} { margin-bottom: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Laptop {
+      .margin--laptop-left--#{$margin-option},
+      %margin--laptop-left--#{$margin-option} { margin-left: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Laptop {
+      .margin--laptop-right--#{$margin-option},
+      %margin--laptop-right--#{$margin-option} { margin-right: $margin; }
+    } 
+  }
+/* Breakpoint Large & Desktop
+/*--------------------------------- */
+  @media (min-width: $breakpoint--Extra-Large) {
+    @each $margin-option, $margin in $margin-Options--Desktop {
+      .margin--desktop--#{$margin-option},
+      %margin--desktop--#{$margin-option} { margin: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Desktop {
+      .margin--desktop-vert--#{$margin-option},
+      %margin--desktop-vert--#{$margin-option} { margin-top: $margin; margin-bottom: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Desktop {
+      .margin--desktop-horz--#{$margin-option},
+      %margin--desktop-horz--#{$margin-option} { margin-left: $margin; margin-right: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Desktop {
+      .margin--desktop-top--#{$margin-option},
+      %margin--desktop-top--#{$margin-option} { margin-top: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Desktop {
+      .margin--desktop-bottom--#{$margin-option},
+      %margin--desktop-bottom--#{$margin-option} { margin-bottom: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Desktop {
+      .margin--desktop-left--#{$margin-option},
+      %margin--desktop-left--#{$margin-option} { margin-left: $margin; }
+    }
+    @each $margin-option, $margin in $margin-Options--Desktop {
+      .margin--desktop-right--#{$margin-option},
+      %margin--desktop-right--#{$margin-option} { margin-right: $margin; }
+    } 
+  }
+
+}
+
+
+.margin--reset {
+  margin: 0 !important;
+}

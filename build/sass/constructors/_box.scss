@@ -1,0 +1,50 @@
+$use-Box: true !default;
+$use-Box--Display: true !default;
+$use-Box--Fill: true !default;
+$use-Box--Position: true !default;
+
+/* ----------------------------------------------------------------- */
+/* Box
+/* ----------------------------------------------------------------- */
+@if $use-Box == true {
+
+	@if $use-Box--Display == true {
+		.box--block {
+			display: block; 
+		}
+
+		.box--inline {
+			display: inline; 
+		}
+
+		.box--inline-block {
+			display: inline-block;
+		}
+	} // End $use-Box--Display
+
+/*--------------------------------- */
+/* Fill
+/*--------------------------------- */
+	@if $use-Box--Fill == true {
+		.box--fill--horz {
+	  	width: 100%;
+	  }
+	 	.box--fill--vert {
+	  	height: 100%;
+	  }
+	} // End $use-Box--Fill
+
+/* Block
+/*--------------------------------- */
+.box--relative {
+  position: relative; }
+
+.box--vertical {
+  display: table; }
+
+.box--vertical .vertical {
+  display: table-cell;
+  margin: 0;
+  vertical-align: middle; }
+
+}

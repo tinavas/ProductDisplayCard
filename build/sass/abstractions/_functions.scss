@@ -1,0 +1,34 @@
+// Map Deep Get
+// Given a map and a list of keys, find the value at the given key
+// ===================================================================================================== +
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+// Palette
+// Access the color palatte with a single name reference and universal tones.
+// ===================================================================================================== +
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+// Palette Background
+// Access the color palatte with a single name reference and universal tones.
+// ===================================================================================================== +
+@function paletteBackground($bg-palette, $tone: 'base') {
+    @return map-get(map-get($bg-palletes, $bg-palette), $tone);
+}
+
+// Z-Index
+// Create human-friendly Z layers, so it's easy to manage User Interface interactions
+// ===================================================================================================== +
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-get($z-layers, $layer);
+}

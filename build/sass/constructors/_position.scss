@@ -1,0 +1,20 @@
+
+
+@if $use-Position == true {
+	.position--bottom {
+		bottom: 0;
+		position: absolute;
+	}
+
+	.position--horz {
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
+
+	.position--vert {
+		bottom: 0;
+		top: 0;
+		width: 100%;
+	}
+}

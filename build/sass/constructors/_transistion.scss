@@ -1,0 +1,3 @@
+.transistion--all {
+	@include TransistionEffect($delay: 0s, $duration: 0.25s, $property: all);
+}

@@ -1,0 +1,30 @@
+/* Constuctor Variable Examples
+/*---------------------------------
+* $use-: true !default;
+* @if $use- == true {
+/*--------------------------------- */
+
+
+$use-Border: true !default;
+$use-Border--Primary: true !default;
+$use-Border--Secondary: true !default;
+$use-Border--Radius: true !default;
+$use-Border--Radius--Shaved: true !default;
+$use-Border--Radius--Shaved--Sides: true !default;
+$use-Border--Radius--Curved: true !default;
+$use-Border--Radius--Curved--Sides: true !default;
+$use-Border--Radius--Rounded: true !default;
+$use-Border--Radius--Rounded--Sides: true !default;
+
+$use-Box: true !default;
+$use-Expand: true !default;
+$use-Height: true !default;
+$use-Links: true !default;
+$use-Lists: true !default;
+$use-Margin: true !default;
+$use-Padding: true !default;
+$use-Position: true !default;
+$use-Pseudo: true !default;
+$use-Text: true !default;
+$use-Transistion: true !default;
+$use-Z-Index: true !default;

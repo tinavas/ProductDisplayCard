@@ -1,0 +1,4 @@
+# Ignore paths that contain user-generated content.
+build/node_modules/*
+build/bower_components/*
+build/.sass-cache

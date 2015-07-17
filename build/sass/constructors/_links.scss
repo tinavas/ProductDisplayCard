@@ -1,0 +1,38 @@
+$use-Links: true !default;
+$use-Links--Light: true !default;
+$use-Links--Dark: true !default;
+$use-Links--Theme: true !default;
+
+/* ----------------------------------------------------------------- */
+/* Links
+/* ----------------------------------------------------------------- */
+@if $use-Links == true {
+	@if $use-Links--Light == true {
+		.link--light,
+		.link--light a {
+			color: #FFF;
+		}
+	} // End $use-Links--Light
+
+	@if $use-Links--Dark == true {
+		.link--dark,
+		.link--dark a {
+			color: #3E3E3E;
+		}
+	} // End $use-Links--Dark
+
+	@if $use-Links--Theme == true {
+		.link--primary,
+		.link--primary a {
+			color: $color--Primary;
+		}
+		.link--secondary,
+		.link--secondary a {
+			color: $color--Secondary;
+		}
+		.link--tertiary,
+		.link--tertiary a {
+			color: $color--Tertiary;
+		}
+	} // End $use-Links--Light
+} // End $use-Links

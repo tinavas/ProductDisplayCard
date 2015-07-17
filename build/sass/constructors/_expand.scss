@@ -1,0 +1,27 @@
+$use-Expand: true !default;
+$use-Expand--Mini: true !default;
+
+/* ----------------------------------------------------------------- */
+/* Expand
+/* The Expand Constructors expand elements outside of the default parent container size.
+/* ----------------------------------------------------------------- */
+
+@if $use-Expand == true {
+	@if $use-Expand--Mini == true {
+		.container--mini .expand--mini {
+			width: 100%;
+			@media (min-width: $breakpoint--Medium) {
+				margin-left:-30%;
+				width: 160%;
+			}
+		}
+
+		.container--mini .expand--explode {
+			width: 100%;
+			@media (min-width: $breakpoint--Medium) {
+				margin-left:-50%;
+				width: 200%;
+			}
+		}
+	} // End $use-Expand--Mini
+} // End $use-Expand

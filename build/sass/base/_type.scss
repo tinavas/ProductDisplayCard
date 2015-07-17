@@ -1,0 +1,59 @@
+@if $use-typography == true {
+  //------------------------------------
+  //  TYPE
+  //------------------------------------
+
+  // Variables
+  $small-size: 12px !default;
+  $micro-size: 10px !default;
+
+  p {
+    margin-top: 0;
+  }
+
+  // Links
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:visited {
+      cursor: pointer;
+    }
+
+    p & {
+      &,
+      &:visited { line-height: inherit; }
+    }
+  }
+
+
+  // Sizing
+  small,
+  .small {
+    @include font-size($small-size);
+  }
+
+  .micro {
+    @include font-size($micro-size);
+  }
+
+
+  // Addresses
+  address { font-style: normal; }
+
+
+  // Other elements
+  abbr {
+    &[title],
+    &[data-original-title] {
+      cursor: help;
+      border-bottom: 1px dotted $base-font-color;
+    }
+  }
+
+  acronym {
+    cursor: help;
+    border-bottom: 1px dashed $base-font-color;
+  }
+}

@@ -1,0 +1,234 @@
+
+/* Core Colors
+/* ----------------------------------------------------------------- */
+
+/* Theme
+/*--------------------------------- */
+$color--Primary:   #265c82 !default;
+$color--Secondary: #1f4c6b !default;
+$color--Tertiary:  #e99b50 !default;
+
+$color--Theme: (
+  "primary":   $color--Primary,
+  "secondary": $color--Secondary,
+  "tertiary":  $color--Tertiary
+);
+
+/* Complimentary
+/*--------------------------------- */
+$color--Complimentary-First:  #e99b50 !default;
+$color--Complimentary-Second: #e99b50 !default;
+$color--Complimentary-Third:  #e99b50 !default;
+
+$color--Complimentary: (
+  "primary":   $color--Complimentary-First,
+  "secondary": $color--Complimentary-Second,
+  "tertiary":  $color--Complimentary-Third
+);
+
+/* Font Color
+/*--------------------------------- */
+$base-font-color:    #333333 !default;
+$base-font-color--light: #a4a4a4 !default;
+$base-link-color:    #62b3e7 !default;
+$base-heading-color: #181818 !default;
+$base-sub-heading-color: #808080 !default;
+
+/* Pallete
+/* --------------------------------- */
+$color--Light: #FFF !default;
+$color--Dark: #333 !default;
+$color--Red:    #bd3709 !default;
+$color--Blue:   #5bc0de !default;
+$color--Gray:   #818181 !default;
+$color--Green:  #5cb85c !default;
+$color--Yellow: #ed9c28 !default;
+$color--Purple: #5c3f7c !default;
+
+$color--Pallete: (
+  "white":  #ffffff,
+  "black":  #222222,
+  "gray":   $color--Gray,
+  "green":  $color--Green,
+  "blue":   $color--Blue,
+  "yellow": $color--Yellow,
+  "red":    $color--Red
+);
+
+/* Taxonomy
+/*--------------------------------- */
+$link--Taxonomy: #1f4c6b !default;
+
+/* Background Colors
+/*--------------------------------- */
+
+$background--Primary: $color--Primary;
+$background--Secondary: $color--Secondary;
+$background--Tertiary: $color--Tertiary;
+$background--Light: $color--Light;
+$background--Dark: $color--Dark;
+
+$bg--Theme: (
+  "primary":   $color--Primary,
+  "secondary": $color--Secondary,
+  "tertiary":  $color--Tertiary
+);
+
+$bg-palletes: (
+    light: (
+        base:          $background--Light,
+        lighter:       lighten($background--Light, 10%),
+        darker:        darken($background--Light, 10%)
+    ),
+    dark: (
+        base:           $background--Dark,
+        lighter:        lighten($background--Dark, 10%),
+        darker:         darken($background--Dark, 10%)
+    ),
+    primary: (
+        base:           $background--Primary,
+        lighter:        lighten($background--Primary, 10%),
+        darker:         darken($background--Primary, 10%)
+    ),
+    secondary: (
+        base:           $background--Secondary,
+        lighter:        lighten($background--Secondary, 10%),
+        darker:         darken($background--Secondary, 10%)
+    ),
+    tertiary: (
+        base:           $background--Tertiary,
+        lighter:        lighten($background--Tertiary, 10%),
+        darker:         darken($background--Tertiary, 10%)
+    )
+);
+
+$bg-colors: (
+  "white":  #ffffff,
+  "black":  #222222,
+  "gray":   $color--Gray,
+  "green":  $color--Green,
+  "blue":   $color--Blue,
+  "yellow": $color--Yellow,
+  "red":    $color--Red
+);
+
+$bg-opacity: (
+  10: 0.10,
+  15: 0.15,
+  20: 0.20,
+  25: 0.25,
+  30: 0.30,
+  35: 0.35,
+  40: 0.40,
+  45: 0.45,
+  50: 0.50,
+  55: 0.55,
+  60: 0.60,
+  65: 0.65,
+  70: 0.70,
+  75: 0.75,
+  80: 0.80,
+  85: 0.85,
+  90: 0.90,
+  95: 0.95,
+);
+
+$pseudo-opacity: (
+  10: 0.10,
+  15: 0.15,
+  20: 0.20,
+  25: 0.25,
+  30: 0.30,
+  35: 0.35,
+  40: 0.40,
+  45: 0.45,
+  50: 0.50,
+  55: 0.55,
+  60: 0.60,
+  65: 0.65,
+  70: 0.70,
+  75: 0.75,
+  80: 0.80,
+  85: 0.85,
+  90: 0.90,
+  95: 0.95,
+);
+
+/* Type Colors
+/*--------------------------------- */
+$type-colors: (
+  "white":  #ffffff,
+  "black":  #222222,
+  "gray":   $color--Gray,
+  "green":  $color--Green,
+  "blue":   $color--Blue,
+  "yellow": $color--Yellow,
+  "red":    $color--Red
+);
+/* Form
+/* ----------------------------------------------------------------- */
+/* Action
+/*--------------------------------- */
+$form--Submit: #ff7404 !default;
+
+/* Interface
+/*--------------------------------- */
+$form--Border: #e2e2e2 !default;
+$form--Border--Active: #d2d2d2 !default;
+
+/* Progress Bar
+/*--------------------------------- */
+$form--Progress-Border: #ff7404 !default;
+
+/* Zones
+/* ----------------------------------------------------------------- */
+$interface--Header: rgba(#FFF, 1);
+$interface--Main:   rgba(#FFF, 1);
+$interface--Footer: rgba(#FFF, 1);
+
+/* Sections
+/* ----------------------------------------------------------------- */
+$interface--Top:     rgba(#FFF, 1);
+$interface--Hero:    rgba(#FFF, 1);
+$interface--Feature: rgba(#FFF, 1);
+$interface--Utility: rgba(#FFF, 1);
+
+$interface--Content--Top:    rgba(#FFF, 1);
+$interface--Content:         rgba(#FFF, 1);
+$interface--Content--Bottom: rgba(#FFF, 1);
+
+$interface--Primary: #ff7404;
+$interface--Secondary: #dc731f;
+
+
+/* Buttons
+/* -----------------------------------------------------------------*/
+$button-font-color:       #ffffff !default;
+$button-hover-font-color: #ffffff !default;
+
+$button--White: #FFF;
+$button--Blue: #265c82;
+$button--Red: #1f4c6b;
+
+/* User Interface
+/* ----------------------------------------------------------------- */
+
+/* Form
+/* --------------------------------- */
+$placeholder-color:     #bbbbbb !default;
+
+/* Component PisZaZ
+/* --------------------------------- */
+$object-ui-color:       #cccccc !default;
+
+/* Dropdown
+/* --------------------------------- */
+$dropdown-bg-color:     #ffffff !default;
+$dropdown-border-color: #ededed !default;
+$dropdown-hover-color:  #f3f8f8 !default;
+$dropdown-header-color: #aaaaaa !default;
+
+/* Misc
+/* --------------------------------- */
+$selection-background:  #265c82 !default;
+$selection-color:       #ffffff !default;

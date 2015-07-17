@@ -1,0 +1,34 @@
+/* ----------------------------------------------------------------- */
+/* Box
+/* ----------------------------------------------------------------- */
+.box--block {
+  display: block; }
+
+.box--inline {
+  display: inline; }
+
+.box--inline-block {
+  display: inline-block; }
+
+/* Fill
+/*--------------------------------- */
+.box--fill--horz {
+  width: 100%; }
+
+.box--fill--vert {
+  height: 100%; }
+
+/* Block
+/*--------------------------------- */
+.box--relative {
+  position: relative; }
+
+.box--vertical {
+  display: table; }
+
+.box--vertical .vertical {
+  display: table-cell;
+  margin: 0;
+  vertical-align: middle; }
+
+/*# sourceMappingURL=_box.css.map */
