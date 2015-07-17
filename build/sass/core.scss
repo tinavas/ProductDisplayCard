@@ -65,7 +65,7 @@ $footer--Background: #d4d4d4;
 	@include box-shadow(2px 2px 2px rgba(0,0,0, 0.3));
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 920px;
+	max-width: 980px;
 /* 1.1 | Header
 /* ----------------------------------------------------------------- */	
 	.item-header {
@@ -135,15 +135,6 @@ $footer--Background: #d4d4d4;
 			font-style: initial;
 			font-weight: 300;
 		}
-			.highest-price,
-			.lowest-price {
-				color: #FFF;
-				display: inline-block;
-				padding-top: 10px;
-				text-align: center;
-				@include text-shadow(1px 2px 1px rgba(0,0,0, 0.5));
-				width: 45%;
-			}
 		/* Header / Product Tags
 ----/* --------------------------------- */
 		.product-tags {
@@ -514,30 +505,110 @@ $footer--Background: #d4d4d4;
 				background-image: url('../bg/bg--feature.jpg');
 				@include background-size(cover);
 				background-position: center;
+				font-family: $base-heading-font-family;
 				position: relative;
 				height: 365px;
 
-				.image-featured--information {
+				.notification {
 					@include rgba-background(rgba(#000, 0.2));
-					@include border-radius(0 0 35px 35px);
-					min-height: 90px;
+					//@include border-radius(0 0 35px 35px);
+					min-height: 105px;
 					margin-left: auto;
 					margin-right: auto;
-
+					padding-top: 10px;
+					position: relative;
+					width: 100%;
+				}
+				.notification-title {
+					color: #FFF;
+					font-size: 22px;
+					margin: 0;
+					letter-spacing: 0.45px;
+					text-align: center;
+				}
+				.notification-tagline {
+					color: #FFF;
+					font-size: 15px;
+					margin: 0;
+					text-align: center;
+				}
+				.price-notification {
+					display: inline-block;
+					margin-left: 10%;
+					margin-right: auto;
+					margin-top: 7.5px;
+					text-align: center;
 					width: 80%;
 				}
+				input.area-code,
+				input.phone-number,
+				input.submit {
+					border: none;
+					@include border-radius(5px);
+					height: 27.5px;
+					text-align: center;
+				}
+				.area-code {
+					display: inline-block;
+					margin-right: 1.5%;
+					text-align: center;
+					width: 15%;
+				}
+				.phone-number {
+					display: inline-block;
+					margin-right: 1.5%;
+					width: 40%;
+				}
+				.submit {
+					border: none;
+					@include border-radius(5px);
+					color: #FFF;
+					@include linear-gradient(to bottom, #d66d51, darken(#d66d51, 10) );
+					padding: 7.5px;
+					//width: 12.5%;
+				}
+					.highest-price,
+					.lowest-price {
+						@include border-radius(50%);
+						color: #FFF;
+						display: inline-block;
+						font-family: $base-heading-font-family;
+						font-weight: 100;
+						letter-spacing: 0.35px;
+						//height: 75px;
+						padding-bottom: 15px;
+						padding-left: 15px;
+						padding-right: 15px;
+						padding-top: 15px;
+						position: absolute;
+						text-align: center;
+						//@include text-shadow(1px 2px 1px rgba(0,0,0, 0.5));
+						//width: 75px;
+					}
+					.highest-price {
+						@include linear-gradient(to bottom, #d66d51, darken(#d66d51, 10) );
+						left: 17.5px;
+						text-align: left;
+						top: 10px;
+					}
+					.lowest-price {
+						@include linear-gradient(to bottom, #d66d51, darken(#d66d51, 10) );
+						right: 17.5px;
+						text-align: right;
+						top: 10px;
+					}
 
 				.image-featured--container {
 					border:  20px solid rgba($color--Primary, 0.5);
 					@include border-radius(50%);
 					display: table; 
-					height: 200px;
+					height: 170px;
 					margin-bottom: 10px;
 					margin-left: auto;
 					margin-right: auto;
-					margin-top: 10px;
+					margin-top: 20px;
 
-					width: 200px;
+					width: 170px;
 					a {
 						background-color: #FFF;
 						@include border-radius(50%);
